@@ -6,8 +6,35 @@
     <title>Journey</title>
     <!-- link css -->
      <link rel="stylesheet" href="mystyle_journey.css">
+    <!-- link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- Navigation Bar Start -->
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="resource/logo_new1.svg" alt="Logo" class="logo-img">
+        </div>
+
+        <!-- ปุ่ม Toggle X and ☰ -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- list for page -->
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" onclick="setActive(this)">Home</a></li>
+          <li><a href="journey.html" class="nav-link active" onclick="setActive(this)">Journey</a></li>
+          <li><a href="future.html" class="nav-link" onclick="setActive(this)">Future</a></li>
+        </ul>
+    </nav>
+    <!-- Navigation Bar End -->
+
+    <script src="script.js"></script>
 </body>
 </html>

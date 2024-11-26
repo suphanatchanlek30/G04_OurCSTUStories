@@ -1,5 +1,181 @@
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    padding-top: 100px; /* เผื่อพื้นที่สำหรับ Navbar fixed */
+}
+
+/* Navigation Bar Start */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 90px;
+}
+
+.logo img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222222;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #0078ff;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-links a.active {
+    color: #0078ff;
+    font-weight: 600;
+}
+
+.menu-toggle {
+    display: none;
+    width: 25px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #222222;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle span:nth-child(1) {
+    top: 0;
+}
+
+.menu-toggle span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-toggle span:nth-child(3) {
+    bottom: 0;
+}
+
+/* Hamburger Animation when Active */
+.menu-toggle.active span:nth-child(1) {
+    top: 55%;
+    transform: rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    bottom: 45%;
+    transform: rotate(-45deg);
+    
+}
+
+.menu-toggle.active span:nth-child(3) {
+    opacity: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 1rem 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 120px;
+        left: -100%;
+        width: 100%;
+        background-color: rgba(255,255,255,0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.4s ease;
+        z-index: 1000;
+    }
+
+    .nav-links.open {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links.open li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-links.open li:nth-child(1) { transition-delay: 0.1s; }
+    .nav-links.open li:nth-child(2) { transition-delay: 0.1s; }
+    .nav-links.open li:nth-child(3) { transition-delay: 0.1s; }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1200px) {
+    .nav-links a {
+        font-size: 18px;
+    }
+}
+/* Navigation Bar End */
