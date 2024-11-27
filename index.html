@@ -34,30 +34,82 @@
         </ul>
     </nav>
     <!-- Navigation Bar End -->
+    
+    <!-- Hearder Start -->
+    <header class="header-test">
+      <h1>Welcome To Ours Website</h1>
+    </header>
+    <!-- Hearder End -->
 
-    <!-- image start-->
-    <img src="/resource/fblogo.png" width="50">
-    <!-- image end-->
-    <!-- guestbook start-->
-    <form id="guestbook">
-      <!--name-->
-      <label for="name">Name: </label>
-      <input type="text" id="name" name="name" required>
-      <br><br>
-      <!--commment-->
-      <label for="comment">Comment: </label>
-      <textarea type="text" name="comment" rows="4" required></textarea>
-      <br><br>
-      <!--something that should be add more-->
-      <button type="submit">Submit</button>
+    <!-- Form Start -->
+    <form id="guest_Form">
+      <!-- ข้อมูลส่วนตัว -->
+      <section class="form_section">
+        <!-- ชือ นามสกุล อังกฤษ -->
+        <div class="form_group_english">
+          <!-- ชือ อังกฤษ -->
+          <div class="firstname_english">
+              <label for="firstname_english">First Name (ภาษาอังกฤษ) 
+                  <span class="required">*</span></label>
+              <input type="text" id="firstname_english" placeholder="Your first name" required>
+          </div>
+
+          <!-- นามสกุล อังกฤษ -->
+          <div class="lastname_english">
+              <label for="lastname_english">Last Name (ภาษาอังกฤษ)
+                  <span class="required">*</span>
+              </label>
+              <input type="text" id="lastname_english" placeholder="Your last name" required>
+          </div>
+        </div>
+
+         <!-- อาชีพ -->
+        <div class="role_group">
+          <div class="role">
+              <label for="role">อาชีพ
+                  <span class="required">*</span>
+              </label>
+              <select id="role" name="role" required>
+                  <option value>-- เลือกอาชีพ --</option>
+                  <option value="law">อาจารย์</option>
+                  <option value="commerce">นักศึกษา</option>
+                  <option value="law">อื่นๆ</option>
+              </select>
+          </div>
+        </div>
+
+        <!-- Star 1-5 -->
+        <div class="star_group">
+          <label>ให้คะแนนเว็ปไซต์ [1-5] 
+            <span class="required">*</span>
+          </label>
+          <div class="star_options">
+              <label>
+                  <input type="radio" name="star" value="star1"> 1
+              </label>
+              <label>
+                  <input type="radio" name="star" value="star2"> 2
+              </label>
+              <label>
+                  <input type="radio" name="star" value="star3"> 3
+              </label>
+              <label>
+                <input type="radio" name="star" value="star4"> 4
+              </label>
+              <label>
+                <input type="radio" name="star" value="star5"> 5
+              </label>
+          </div>
+        </div>
+
+        <div class="button_submit_group">
+          <button class="button_submit" type="submit" value="Submit">Submit</button>
+        </div>
+
+      </section>
     </form>
-    <!-- guestbook end-->
+    <!-- Form End -->
 
-    <!-- Guest book comment-->
-    <div id="guestcomment">
-      
-    </div>
-    <!-- guest book comment end-->
     <script src="script.js"></script>
 </body>
 </html>
