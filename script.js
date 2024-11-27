@@ -31,3 +31,11 @@ document.addEventListener('click', function(event) {
     }
 });
 // Navbar End
+
+//future//
+document.querySelectorAll('.social-icons i').forEach(icon => {
+    icon.addEventListener('click', () => {
+      alert('Icon clicked!');
+    });
+  });
+//future end
