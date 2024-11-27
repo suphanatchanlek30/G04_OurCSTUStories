@@ -126,8 +126,9 @@ body {
 .menu-toggle.active span:nth-child(3) {
     opacity: 0;
 }
+/* Navigation Bar End */
 
-/*biome*/
+/* Start Profile Card */
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -221,6 +222,7 @@ a:hover{
     font-size: 1.2rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
+/* Start Profile End */
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
@@ -273,4 +275,3 @@ a:hover{
         font-size: 18px;
     }
 }
-/* Navigation Bar End */
