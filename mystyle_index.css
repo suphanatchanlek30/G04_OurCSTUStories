@@ -145,6 +145,23 @@ body {
 /* Header End */
 
 /* Form Start */
+.position-form {
+    display: flex;
+    width: 1/2;
+}
+
+.output-data {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 1/2;
+    width: 55%;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #121826;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 form {
     font-family: "Athiti", sans-serif;

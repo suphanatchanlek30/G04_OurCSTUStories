@@ -41,6 +41,7 @@
     </header>
     <!-- Hearder End -->
 
+    <div class="position-form">
     <!-- Form Start -->
     <form id="guest_Form">
       <!-- ข้อมูลส่วนตัว -->
@@ -71,9 +72,9 @@
               </label>
               <select id="role" name="role" required>
                   <option value>-- เลือกอาชีพ --</option>
-                  <option value="law">อาจารย์</option>
-                  <option value="commerce">นักศึกษา</option>
-                  <option value="law">อื่นๆ</option>
+                  <option value="teacher">อาจารย์</option>
+                  <option value="student">นักศึกษา</option>
+                  <option value="other">อื่นๆ</option>
               </select>
           </div>
         </div>
@@ -85,19 +86,19 @@
           </label>
           <div class="star_options">
               <label>
-                  <input type="radio" name="star" value="star1"> 1
+                  <input type="radio" name="star" value="1"> 1
               </label>
               <label>
-                  <input type="radio" name="star" value="star2"> 2
+                  <input type="radio" name="star" value="2"> 2
               </label>
               <label>
-                  <input type="radio" name="star" value="star3"> 3
+                  <input type="radio" name="star" value="3"> 3
               </label>
               <label>
-                <input type="radio" name="star" value="star4"> 4
+                <input type="radio" name="star" value="4"> 4
               </label>
               <label>
-                <input type="radio" name="star" value="star5"> 5
+                <input type="radio" name="star" value="5"> 5
               </label>
           </div>
         </div>
@@ -118,6 +119,10 @@
     </form>
     <!-- Form End -->
 
+    <!-- Output Start -->
+    <div class="output-data" id="output"></div>
+    <!-- Output End -->
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
