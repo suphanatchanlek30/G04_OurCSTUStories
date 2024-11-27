@@ -12,6 +12,7 @@ body {
 
 /* Navigation Bar Start */
 .navbar {
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,7 +93,7 @@ body {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #ffffff;
+    background-color: #000000;
     position: absolute;
     transition: all 0.3s ease-in-out;
 }
@@ -263,6 +264,58 @@ form {
     margin-right: 5px;
 }
 /* Star End */
+
+/* Comment Start */
+/* Group container */
+.comment_group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1.5rem;
+    max-width: 420px;
+}
+
+/* Label styling */
+.comment_group label {
+    font-weight: 600;
+    color: #121826;
+    font-size: 14px;
+    display: block;
+}
+
+/* Required asterisk */
+.required {
+    color: #FF0000;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* Textarea styling */
+textarea {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #555963;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    resize: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+textarea:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.4);
+    outline: none;
+}
+
+/* Placeholder styling */
+textarea::placeholder {
+    font-family: "Athiti", sans-serif;
+    color: #A0A0A0;
+    font-size: 14px;
+}
+/* Comment End */
 
 /* Button Start */
 .button_submit_group {
