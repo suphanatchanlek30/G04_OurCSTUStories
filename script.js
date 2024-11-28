@@ -40,3 +40,24 @@ document.querySelectorAll('.social-icons i').forEach(icon => {
   });
 //future end
 
+//toggleNightMode//
+const toggleNightMode = document.getElementById('toggleNightMode');
+const body = document.body;
+
+if (localStorage.getItem('nightMode') === 'enabled') {
+    body.classList.add('night-mode');
+    toggleNightMode.textContent = '☀️'; 
+}
+
+toggleNightMode.addEventListener('click', () => {
+    if (body.classList.contains('night-mode')) {
+        body.classList.remove('night-mode');
+        toggleNightMode.textContent = '🌙'; 
+        localStorage.setItem('nightMode', 'disabled');
+    } else {
+        body.classList.add('night-mode');
+        toggleNightMode.textContent = '☀️'; 
+        localStorage.setItem('nightMode', 'enabled');
+    }
+});
+//toggleNightModeEnd//
