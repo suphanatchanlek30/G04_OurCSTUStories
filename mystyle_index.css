@@ -144,6 +144,32 @@ body {
 }
 /* Header End */
 
+/* Video group Start */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    width: 100%;
+}
+
+.video-wrapper {
+    width: 90%;
+    max-width: 900px; /* กำหนดความกว้างสูงสุด */
+    aspect-ratio: 16/9; /* รักษาสัดส่วน 16:9 */
+    background-color: #d6d6d6; /* สีพื้นหลังเมื่อวิดีโอโหลด */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+/* Video group End */
+
 /* Form Start */
 .position-form {
     display: flex;
