@@ -61,3 +61,73 @@ toggleNightMode.addEventListener('click', () => {
     }
 });
 //toggleNightModeEnd//
+
+
+// ดึงองค์ประกอบ HTML
+const outputDiv = document.getElementById("output");
+
+// ตรวจสอบว่า Local Storage มีข้อมูลหรือไม่
+let guestBookEntries = JSON.parse(localStorage.getItem("guestBookEntries")) || [];
+
+// โหลดข้อมูลเก่าเมื่อเปิดหน้าเว็บ
+document.addEventListener("DOMContentLoaded", updateOutput);
+
+// ฟังก์ชันสำหรับจัดการเมื่อกด Submit
+function handleSubmit() {
+    // ดึงค่าจากฟอร์ม
+    const firstName = document.getElementById("firstname_english").value;
+    const lastName = document.getElementById("lastname_english").value;
+    const role = document.getElementById("role").value;
+    const star = document.querySelector("input[name='star']:checked")?.value || "No Rating";
+    const comment = document.getElementById("comment").value;
+
+    // ตรวจสอบว่ากรอกข้อมูลครบหรือยัง
+    if (!firstName || !lastName || !role || !comment) {
+        alert("กรุณากรอกข้อมูลให้ครบถ้วน!");
+        return;
+    }
+
+    // สร้างออบเจ็กต์สำหรับเก็บข้อมูล
+    const entry = {
+        firstName,
+        lastName,
+        role,
+        star,
+        comment,
+    };
+
+    // เพิ่มข้อมูลลงในอาร์เรย์
+    guestBookEntries.push(entry);
+
+    // บันทึกข้อมูลลงใน Local Storage
+    localStorage.setItem("guestBookEntries", JSON.stringify(guestBookEntries));
+
+    // อัพเดตการแสดงผล
+    updateOutput();
+
+    // ล้างค่าในฟอร์มหลังจากเพิ่มข้อมูล
+    document.getElementById("guest_Form").reset();
+}
+
+// ฟังก์ชันอัพเดตข้อมูลในหน้าเว็บ
+function updateOutput() {
+    // ล้างข้อมูลเก่า
+    outputDiv.innerHTML = "";
+
+    // แสดงรายการทั้งหมด
+    guestBookEntries.forEach((entry, index) => {
+        const entryDiv = document.createElement("div");
+        entryDiv.className = "guest-entry";
+        entryDiv.innerHTML = `
+            <h3><strong>Guest Number : ${index + 1}</strong></h3>
+            <p class="name">${entry.firstName} ${entry.lastName}</p>
+            <p><strong>Role :</strong> ${entry.role}</p>
+            <p><strong>Rating :</strong> ${entry.star} <span>⭐</span></p>
+            <p><strong>Comment :</strong> ${entry.comment}</p>
+            <hr>
+        `;
+        outputDiv.appendChild(entryDiv);
+    });
+}
+
+
