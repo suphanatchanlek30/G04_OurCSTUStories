@@ -426,7 +426,7 @@ a:hover {
         background: white;
         border-radius: 15px;
         width: 300px;
-        height: 550px;
+        height: 600px;
         display: flex;
         flex-direction: column;
         overflow: hidden;
