@@ -823,7 +823,7 @@ textarea::placeholder {
 
 /* Night Mode Theme */
 body.night-mode {
-    background-color: #000000;
+    background-color: #333333;
     color: #f5f5f5;
 }
 
@@ -834,7 +834,7 @@ body.night-mode .navbar {
 }
 
 body.night-mode .nav-links a {
-    color: #000000;
+    color: white;
 }
 
 body.night-mode .nav-links a.active {
@@ -859,4 +859,22 @@ body.night-mode .star_group label {
 
 body.night-mode .comment_group label {
     color: white;
+}
+
+body.night-mode .guest-entry h3 {
+    color: #333;
+}
+
+body.night-mode .guest-entry p {
+    font-family: "Athiti", sans-serif;
+    color: #ffffff;
+}
+
+body.night-mode .guest-entry strong {
+    font-family: "Athiti", sans-serif;
+    color: #ffffff;
+}
+
+body.night-mode .header-test h1 {
+    color: #ffffff;
 }

@@ -62,6 +62,17 @@ toggleNightMode.addEventListener('click', () => {
 });
 //toggleNightModeEnd//
 
+// เพิ่ม Event Listener ให้กับปุ่ม
+document.getElementById('toggleNightMode').addEventListener('click', function() {
+    const logo = document.getElementById('logoImage'); // เข้าถึงโลโก้
+
+    // ตรวจสอบและสลับโลโก้ตามสถานะ
+    if (logo.src.includes('logo_new1.svg')) {
+        logo.src = 'resource/logo_new2.svg'; // เปลี่ยนเป็นโลโก้ใหม่
+    } else {
+        logo.src = 'resource/logo_new1.svg'; // เปลี่ยนกลับเป็นโลโก้เดิม
+    }
+});
 
 // ดึงองค์ประกอบ HTML
 const outputDiv = document.getElementById("output");
