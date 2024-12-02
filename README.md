@@ -17,5 +17,5 @@
    รับผิดชอบหน้า Director
    ทำ Navbar , Form , Responsive และเป็น Version Controler ควบคุมความสอดคล้องกันของทุกหน้าเว็บ
 7. 6709681057 นายกฤษณะพล บุญเรือง
-   รับผิดชอบหน้า Journey
-   Deploy web on aws.
+   รับผิดชอบหน้า Journey 
+   ออกแบบหน้าเว็บ , Deploy web on aws
