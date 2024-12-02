@@ -366,11 +366,58 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 996px) {
+@media screen and (max-width: 996px) {
     .container {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+
+    .navbar {
+        padding: 1rem 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 120px;
+        left: -100%;
+        width: 100%;
+        background-color: rgba(255,255,255,0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.4s ease;
+        z-index: 1000;
+    }
+
+    .nav-links.open {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links.open li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-links.open li:nth-child(1) { transition-delay: 0.1s; }
+    .nav-links.open li:nth-child(2) { transition-delay: 0.2s; }
+    .nav-links.open li:nth-child(3) { transition-delay: 0.3s; }
+    .header-test {
+        padding: 0.5rem;
+        margin-top: 8rem;
+        text-align: center; /* จัดให้อยู่ตรงกลาง */
     }
 
     .box1 {
