@@ -618,8 +618,8 @@ textarea::placeholder {
     }
 
     .nav-links.open li:nth-child(1) { transition-delay: 0.1s; }
-    .nav-links.open li:nth-child(2) { transition-delay: 0.1s; }
-    .nav-links.open li:nth-child(3) { transition-delay: 0.1s; }
+    .nav-links.open li:nth-child(2) { transition-delay: 0.2s; }
+    .nav-links.open li:nth-child(3) { transition-delay: 0.3s; }
     .header-test {
         padding: 0.5rem;
         margin-top: 8rem;
@@ -837,6 +837,10 @@ body.night-mode .nav-links a {
     color: white;
 }
 
+body.night-mode .menu-toggle span {
+    background-color: white;
+}
+
 body.night-mode .nav-links a.active {
     color: #0078ff;
 }
@@ -878,3 +882,4 @@ body.night-mode .guest-entry strong {
 body.night-mode .header-test h1 {
     color: #ffffff;
 }
+
