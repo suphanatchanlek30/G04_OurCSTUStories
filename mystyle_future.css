@@ -425,7 +425,7 @@ a:hover {
     .profile-card {
         background: white;
         border-radius: 15px;
-        width: 300px;
+        width: 310px;
         height: 600px;
         display: flex;
         flex-direction: column;
